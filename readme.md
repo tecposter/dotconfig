@@ -14,14 +14,30 @@ git clone https://github.com/ingydotnet/git-subrepo /usr/local/src/git-subrepo
 ```
 
 ```
-echo 'source /usr/local/src/git-subrepo/.rc' >> ~/.bashrc
+$ echo 'source /usr/local/src/git-subrepo/.rc' >> ~/.bashrc
+$ source ~/.profile
 ```
 
 # tmux
 
-in ~/.profile
+```
+$ git subrepo clone https://github.com/tmux-plugins/tpm vendor/tmux/tpm --debug -v
+```
+
 
 ```
+// in ~/.profile
 export TERM="xterm-256color"
 ```
+
+```
+$ source ~/.profile
+```
+
+```
+tmux new -t sessionname
+<C-b> I // install plugins
+<C-b> R // reload tmux config
+```
+
 
