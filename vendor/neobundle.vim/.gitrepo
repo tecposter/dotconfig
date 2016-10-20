@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/Shougo/neobundle.vim
+	branch = master
+	commit = 88951d60547595606ea0ca8f28f643d2506f2714
+	parent = edacf860e37917c31bf9ab2f8cb5c4155fea0060
+	cmdver = 0.3.0
