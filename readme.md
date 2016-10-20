@@ -47,3 +47,8 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt-get update
 sudo apt-get install neovim
 ```
+
+```
+cd ~/.config
+$ git subrepo clone https://github.com/Shougo/neobundle.vim vendor/neobundle.vim
+```

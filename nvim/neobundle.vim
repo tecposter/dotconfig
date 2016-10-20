@@ -1,4 +1,4 @@
-set runtimepath+=~/.config/nvim/vendor/neobundle.vim/
+set runtimepath+=~/.config/vendor/neobundle.vim/
 
 call neobundle#begin(expand('~/.config/nvim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
