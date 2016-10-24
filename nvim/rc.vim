@@ -50,5 +50,10 @@ set showbreak=↪
 "set clipboard=unnamed
 
 
+"highlight Folded ctermfg=4 ctermbg=3 guifg=DarkBlue guibg=LightGrey¬
+"highlight Search ctermbg=11 guibg=Yellow¬
+hi Folded cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+hi Search cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+hi Visual cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 
 
