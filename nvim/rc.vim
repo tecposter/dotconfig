@@ -52,6 +52,11 @@ set showbreak=↪
 
 "highlight Folded ctermfg=4 ctermbg=3 guifg=DarkBlue guibg=LightGrey¬
 "highlight Search ctermbg=11 guibg=Yellow¬
-hi Folded cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+" FoldColumn     xxx ctermfg=4 ctermbg=248 guifg=DarkBlue guibg=Grey
+
+hi FoldColumn cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+hi Folded cterm=bold ctermfg=NONE ctermbg=NONE
+"hi Folded cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Search cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Visual cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+
