@@ -55,5 +55,3 @@ set showbreak=↪
 hi Folded cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Search cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Visual cterm=reverse,bold ctermfg=NONE ctermbg=NONE
-
-

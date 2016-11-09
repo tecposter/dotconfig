@@ -75,6 +75,8 @@ let g:neomake_php_phpmd_maker = {
     \ 'errorformat': '%E%f:%l%\s%m'
     \ }
 
-
-" \ 'errorformat': '%f: line %l\, col %c\, %m'
-"    \ 'args': ['-c', '~/.config/nvim/neomake/eslint/eslintrc.js'],
+" ==https://github.com/swekaj/php-foldexpr.vim==
+let b:phpfold_text_right_lines = 1
+let b:phpfold_use = 1
+let b:phpfold_group_iftry = 1
+let b:phpfold_text_percent = 1

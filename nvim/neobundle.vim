@@ -11,6 +11,11 @@ NeoBundle 'eugen0329/vim-esearch'
 NeoBundle 'neomake/neomake'
 NeoBundle 'airblade/vim-gitgutter'
 
+NeoBundle 'swekaj/php-foldexpr.vim', {
+    \   'on_ft': ['php'],
+    \}
+" NeoBundle 'vim-scripts/phpfolding.vim'
+
 " --tmux--
 NeoBundle 'tmux-plugins/vim-tmux-focus-events'
 NeoBundle 'roxma/vim-tmux-clipboard'
