@@ -52,3 +52,23 @@ sudo apt-get install neovim
 cd ~/.config
 $ git subrepo clone https://github.com/Shougo/neobundle.vim vendor/neobundle.vim
 ```
+
+# php
+
+```
+$ sudo pacpan -S php
+$ curl -sS https://getcomposer.org/installer | php
+$ mv composer.phar /usr/bin/composer
+$ composer config -g repo.packagist composer https://packagist.phpcomposer.com
+
+// php_codesniffer
+$ composer global require "squizlabs/php_codesniffer=*"
+$ composer global require phpmd/phpmd
+```
+
+# nodejs
+```
+$ sudo pacman -S nodejs npm
+$ sudo npm i -g eslint
+$ sudo npm i -g sass-lint
+```

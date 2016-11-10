@@ -49,7 +49,7 @@ let g:gitgutter_sign_column_always = 1
 autocmd! BufWritePost,BufEnter * Neomake
 " autocmd! BufWritePost * Neomake
 
-let g:neomake_verbose = 3
+"let g:neomake_verbose = 3
 " let g:neomake_logfile='/tmp/error.log'
 
 let g:neomake_open_list = 0
@@ -62,18 +62,21 @@ let g:neomake_error_sign = {
   \ 'texthl': 'ErrorMsg',
   \ }
 
-let g:neomake_javascript_eslint_maker = {
-    \ 'args': ['--no-color', '--format', 'compact', '-c ~/.config/nvim/neomake/eslint/eslintrc.js'],
-    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-    \ '%W%f: line %l\, col %c\, Warning - %m'
-    \ }
-let g:neomake_javascript_enabled_makers = ['eslint']
+"let g:neomake_javascript_eslint_maker = {
+"    \ 'args': ['--no-color', '--format', 'compact', '-c ~/.config/nvim/neomake/eslint/eslintrc.js'],
+"    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+"    \ '%W%f: line %l\, col %c\, Warning - %m'
+"    \ }
+"let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_php_phpcs_args_standard = 'PSR2'
-let g:neomake_php_phpmd_maker = {
-    \ 'args': ['%:p', 'text ~/.config/nvim/neomake/phpmd/rules.xml'],
-    \ 'errorformat': '%E%f:%l%\s%m'
-    \ }
+"let g:neomake_php_phpmd_maker = {
+"    \ 'args': ['%:p', 'text ~/.config/nvim/neomake/phpmd/rules.xml'],
+"    \ 'errorformat': '%E%f:%l%\s%m'
+"    \ }
+
+nmap <leader>ll :ll<cr>
+
 
 " ==https://github.com/swekaj/php-foldexpr.vim==
 let b:phpfold_text_right_lines = 1
