@@ -28,6 +28,9 @@ NeoBundle 'kien/ctrlp.vim', {
     \ },
     \}
 
+NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'vim-scripts/UltiSnips'
+NeoBundle 'janko-m/vim-test'
 
 " ==end==
 

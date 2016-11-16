@@ -46,7 +46,10 @@ let g:gitgutter_sign_column_always = 1
 
 
 " neomake https://github.com/neomake/neomake
+" ref. https://github.com/herrbischoff/dotfiles/blob/2f8617273bdef5795791b2821c7c2df2ef2c2dcc/home/.config/nvim/plugins.vim#L134-L164
 autocmd! BufWritePost,BufEnter * Neomake
+"autocmd! BufWritePre * Neomake
+"autocmd! QuitPre * let g:neomake_verbose = 0
 " autocmd! BufWritePost * Neomake
 
 "let g:neomake_verbose = 3
@@ -75,11 +78,76 @@ let g:neomake_php_phpcs_args_standard = 'PSR2'
 "    \ 'errorformat': '%E%f:%l%\s%m'
 "    \ }
 
-nmap <leader>ll :ll<cr>
-
+noremap <silent> <leader>oo :lopen<CR>
+noremap <silent> <leader>cc :lclose<CR>
+noremap <silent> <leader>ll :ll<CR>
+noremap <silent> <leader>nn :lnext<CR>
+noremap <silent> <leader>pp :lprev<CR>
 
 " ==https://github.com/swekaj/php-foldexpr.vim==
 let b:phpfold_text_right_lines = 1
 let b:phpfold_use = 1
 let b:phpfold_group_iftry = 1
 let b:phpfold_text_percent = 1
+
+" https://github.com/Shougo/deoplete.nvim
+" https://github.com/Shougo/deoplete.nvim/blob/master/doc/deoplete.txt
+" ref https://github.com/Shougo/neocomplete.vim
+" tutorials:
+" https://www.gregjs.com/vim/2016/configuring-the-deoplete-asynchronous-keyword-completion-plugin-with-tern-for-vim/
+" https://github.com/herrbischoff/dotfiles/blob/2f8617273bdef5795791b2821c7c2df2ef2c2dcc/home/.config/nvim/plugins.vim#L134-L164
+let g:acp_enableAtStartup = 0
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#auto_complete_start_length = 1
+if !exists('g:deoplete#omni#input_patterns')
+    let g:deoplete#omni#input_patterns = {}
+endif
+
+let g:deoplete#enable_ignore_case = 'ignorecase'
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.html = '<[^>]*'
+let g:deoplete#omni_patterns.xml  = '<[^>]*'
+let g:deoplete#omni_patterns.md   = '<[^>]*'
+let g:deoplete#omni_patterns.css   = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
+let g:deoplete#omni_patterns.scss   = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
+let g:deoplete#omni_patterns.sass   = '^\s\+\w\+\|\w\+[):;]\?\s\+\w*\|[@!]'
+let g:deoplete#omni_patterns.javascript = '[^. \t]\.\%(\h\w*\)\?'
+let g:deoplete#omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:deoplete#omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+let g:deoplete#omni_patterns.go = '[^.[:digit:] *\t]\.\w*'
+let g:deoplete#omni_patterns.ruby = ['[^. *\t]\.\w*', '\h\w*::']
+let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+let g:deoplete#omni_patterns.python = ['[^. *\t]\.\h\w*\','\h\w*::']
+let g:deoplete#omni_patterns.python3 = ['[^. *\t]\.\h\w*\','\h\w*::']
+
+augroup omnifuncs
+  autocmd!
+  autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+  autocmd FileType php setlocal omnifunc=phpcomplete#Complete
+  autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
+
+let g:deoplete#sources = {}
+let g:deoplete#sources._=['omni', 'buffer', 'member', 'tag', 'ultisnips', 'file']
+
+
+" https://github.com/vim-scripts/UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsEditSplit="vertical"
+
+" https://github.com/janko-m/vim-test
+nmap <silent> <leader>t :TestNearest<CR>
+"nmap <silent> <leader>T :TestFile<CR>
+"nmap <silent> <leader>a :TestSuite<CR>
+"nmap <silent> <leader>l :TestLast<CR>
+"nmap <silent> <leader>g :TestVisit<CR>
+
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'dispatch',
+  \ 'suite':   'basic',
+  \}
