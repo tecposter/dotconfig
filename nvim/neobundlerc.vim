@@ -8,7 +8,7 @@ let g:ctrlp_custom_ignore = {
     \ 'file': '\.exe$\|\.so$'
     \ }
 let g:ctrlp_working_path_mode = 0
-nmap <leader>cc :CtrlPClearAllCaches<cr>
+nmap <leader>C :CtrlPClearAllCaches<cr>
 
 
 " ==Vim ESearch==
@@ -100,6 +100,10 @@ let g:acp_enableAtStartup = 0
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#auto_complete_start_length = 1
+"let g:phpcomplete_index_composer_command = 'composer'
+"let g:deoplete#tag#cache_limit_size = 50000000
+let deoplete#tag#cache_limit_size = 50000000
+" https://github.com/Shougo/deoplete.nvim/issues/309
 if !exists('g:deoplete#omni#input_patterns')
     let g:deoplete#omni#input_patterns = {}
 endif
@@ -117,7 +121,7 @@ let g:deoplete#omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
 let g:deoplete#omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 let g:deoplete#omni_patterns.go = '[^.[:digit:] *\t]\.\w*'
 let g:deoplete#omni_patterns.ruby = ['[^. *\t]\.\w*', '\h\w*::']
-let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
+"let g:deoplete#omni_patterns.php = '\h\w*\|[^. \t]->\%(\h\w*\)\?\|\h\w*::\%(\h\w*\)\?'
 let g:deoplete#omni_patterns.python = ['[^. *\t]\.\h\w*\','\h\w*::']
 let g:deoplete#omni_patterns.python3 = ['[^. *\t]\.\h\w*\','\h\w*::']
 
@@ -127,12 +131,16 @@ augroup omnifuncs
   autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-  autocmd FileType php setlocal omnifunc=phpcomplete#Complete
+  autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup end
 
 let g:deoplete#sources = {}
-let g:deoplete#sources._=['omni', 'buffer', 'member', 'tag', 'ultisnips', 'file']
+"let g:deoplete#sources._ = ['buffer', 'member', 'ultisnips', 'file']
+let g:deoplete#sources._ = ['buffer', 'tag', 'member', 'ultisnips', 'file', 'omni']
+
+"let g:deoplete#sources = {}
+"let g:deoplete#sources._=['omni', 'buffer', 'member', 'tag', 'ultisnips', 'file']
 
 
 " https://github.com/vim-scripts/UltiSnips
@@ -141,6 +149,10 @@ let g:UltiSnipsEditSplit="vertical"
 
 " https://github.com/janko-m/vim-test
 nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>f :TestFile<CR>
+nmap <silent> <leader>T :TestSuite<CR>
+nmap <silent> <leader>; :TestLast<CR>
+nmap <silent> <leader>gg :TestVisit<CR>
 "nmap <silent> <leader>T :TestFile<CR>
 "nmap <silent> <leader>a :TestSuite<CR>
 "nmap <silent> <leader>l :TestLast<CR>
@@ -151,3 +163,16 @@ let test#strategy = {
   \ 'file':    'dispatch',
   \ 'suite':   'basic',
   \}
+
+" https://github.com/craigemery/vim-autotag
+" http://ricostacruz.com/til/navigate-code-with-ctags
+let g:autotagTagsFile=".tags"
+
+" :tn Move to next definition (:tnext)
+" :tp Move to previous definition (:tprevious)
+" :ts List all definitions (:tselect)
+
+" ^]  Jump to definition
+" ^t  Jump back from definition
+" ^W }    Preview definition
+" g]  See all definitions

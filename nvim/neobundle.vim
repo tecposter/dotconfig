@@ -32,6 +32,24 @@ NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'vim-scripts/UltiSnips'
 NeoBundle 'janko-m/vim-test'
 
+NeoBundle 'Shougo/denite.nvim'
+NeoBundle 'craigemery/vim-autotag'
+
+NeoBundle 'tpope/vim-dispatch'
+
+"NeoBundle 'm2mdas/phpcomplete-extended'
+"NeoBundle 'shawncplus/phpcomplete.vim'
+"
+"NeoBundle 'Shougo/vimproc', {
+"      \ 'build' : {
+"      \     'windows' : 'make -f make_mingw32.mak',
+"      \     'cygwin' : 'make -f make_cygwin.mak',
+"      \     'mac' : 'make -f make_mac.mak',
+"      \     'unix' : 'make -f make_unix.mak',
+"      \    },
+"     \ }
+
+
 " ==end==
 
 call neobundle#end()
