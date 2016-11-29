@@ -158,7 +158,7 @@ nmap <silent> <leader>gg :TestVisit<CR>
 "nmap <silent> <leader>l :TestLast<CR>
 "nmap <silent> <leader>g :TestVisit<CR>
 
-let test#strategy = {
+let test#custom_strategies = {
   \ 'nearest': 'neovim',
   \ 'file':    'dispatch',
   \ 'suite':   'basic',
