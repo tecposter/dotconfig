@@ -73,6 +73,10 @@ let g:neomake_error_sign = {
 "let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_php_phpcs_args_standard = 'PSR2'
+let g:neomake_php_phpmd_maker = {
+    \ 'args': ['%:p', 'text', 'cleancode,codesize,controversial,design,naming,unusedcode'],
+    \ 'errorformat': '%E%f:%l%\s%m'
+    \ }
 "let g:neomake_php_phpmd_maker = {
 "    \ 'args': ['%:p', 'text ~/.config/nvim/neomake/phpmd/rules.xml'],
 "    \ 'errorformat': '%E%f:%l%\s%m'
