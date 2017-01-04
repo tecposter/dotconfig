@@ -1,7 +1,7 @@
 source ~/.config/nvim/rc.vim
 source ~/.config/nvim/mapping.vim
-source ~/.config/nvim/neobundlerc.vim
-source ~/.config/nvim/neobundle.vim
+source ~/.config/nvim/deinrc.vim
+source ~/.config/nvim/dein.local.vim
 
 "set encoding=utf8
 " Ref:

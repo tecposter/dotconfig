@@ -48,10 +48,26 @@ sudo apt-get update
 sudo apt-get install neovim
 ```
 
+deprecate neobundle
 ```
 cd ~/.config
 $ git subrepo clone https://github.com/Shougo/neobundle.vim vendor/neobundle.vim
 ```
+
+use dein.vim instead
+```
+cd ~/.dotconfig/nvim/
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installler.sh ./bundle
+```
+
+copy code to ~/.dotconfig/nvim/dein.local.vim
+
+```
+nvim
+:call dein#install()
+```
+
 
 # php
 
