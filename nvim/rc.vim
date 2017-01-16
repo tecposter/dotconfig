@@ -59,4 +59,5 @@ hi Folded cterm=bold ctermfg=NONE ctermbg=NONE
 "hi Folded cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Search cterm=reverse,bold ctermfg=NONE ctermbg=NONE
 hi Visual cterm=reverse,bold ctermfg=NONE ctermbg=NONE
-
+hi DiffAdd cterm=reverse,bold ctermfg=NONE ctermbg=NONE
+hi DiffChange cterm=reverse,bold ctermfg=NONE ctermbg=NONE

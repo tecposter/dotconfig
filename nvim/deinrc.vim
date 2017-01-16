@@ -180,3 +180,18 @@ let g:autotagTagsFile=".tags"
 " ^t  Jump back from definition
 " ^W }    Preview definition
 " g]  See all definitions
+
+
+" Tagbar
+" https://github.com/majutsushi/tagbar
+nmap <silent> <leader>ct :TagbarToggle<CR>
+
+" junegunn/fzf
+" https://github.com/junegunn/fzf
+nmap <silent> <leader>fz :FZF<CR>
+
+" haya14busa/incsearch.vim
+" https://github.com/haya14busa/incsearch.vim
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
