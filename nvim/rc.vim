@@ -48,6 +48,7 @@ set showbreak=↪
 
 "set mouse=i
 "set clipboard=unnamed
+set clipboard+=unnamedplus
 
 
 "highlight Folded ctermfg=4 ctermbg=3 guifg=DarkBlue guibg=LightGrey¬

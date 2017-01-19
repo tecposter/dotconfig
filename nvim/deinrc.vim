@@ -188,7 +188,7 @@ nmap <silent> <leader>ct :TagbarToggle<CR>
 
 " junegunn/fzf
 " https://github.com/junegunn/fzf
-nmap <silent> <leader>fz :FZF<CR>
+nmap <silent> <C-P> :FZF<CR>
 
 " haya14busa/incsearch.vim
 " https://github.com/haya14busa/incsearch.vim

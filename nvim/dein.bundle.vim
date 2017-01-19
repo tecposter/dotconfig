@@ -26,7 +26,7 @@ call dein#add('vim-scripts/matchit.zip')
 "call dein#add('tmux-plugins/vim-tmux-focus-events')
 "call dein#add('roxma/vim-tmux-clipboard')
 
-call dein#add('kien/ctrlp.vim')
+"call dein#add('kien/ctrlp.vim')
 "call dein#add('vim-scripts/UltiSnips')
 call dein#add('janko-m/vim-test')
 
