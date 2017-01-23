@@ -192,8 +192,10 @@ nmap <silent> <C-P> :FZF<CR>
 
 " haya14busa/incsearch.vim
 " https://github.com/haya14busa/incsearch.vim
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+" map /  <Plug>(incsearch-forward)
+" map ?  <Plug>(incsearch-backward)
+" map g/ <Plug>(incsearch-stay)
 
 let g:vim_fakeclip_tmux_plus=1
+
+let g:signify_line_highlight = 0

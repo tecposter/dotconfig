@@ -36,8 +36,12 @@ call dein#add('tpope/vim-dispatch')
 call dein#add('junegunn/fzf')
 
 call dein#add('justinmk/vim-sneak')
-call dein#add('haya14busa/incsearch.vim')
 call dein#add('tpope/vim-obsession')
+
+" call dein#add('haya14busa/incsearch.vim')
+" https://github.com/neovim/neovim/issues/5769
+" https://github.com/neovim/neovim/issues/5902
+" https://github.com/haya14busa/incsearch.vim/issues/88
 
 
 call dein#add('cazador481/fakeclip.neovim')
