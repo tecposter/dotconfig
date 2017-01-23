@@ -195,3 +195,5 @@ nmap <silent> <C-P> :FZF<CR>
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+let g:vim_fakeclip_tmux_plus=1
