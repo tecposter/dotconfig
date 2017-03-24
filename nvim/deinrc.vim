@@ -65,12 +65,21 @@ let g:neomake_error_sign = {
   \ 'texthl': 'ErrorMsg',
   \ }
 
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_exe = system('PATH=$(npm bin):$PATH && which eslint | tr -d "\n"')
+
+let g:neomake_scss_enabled_makers = ['sasslint']
+let g:neomake_scss_sasslint_exe = system('PATH=$(npm bin):$PATH && which sass-lint | tr -d "\n"')
+
+
+"let s:eslint_path = system('PATH=$(npm bin):$PATH && which eslint')
+"let b:neomake_javascript_eslint_exe = substitute(s:eslint_path, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
+
 "let g:neomake_javascript_eslint_maker = {
 "    \ 'args': ['--no-color', '--format', 'compact', '-c ~/.config/nvim/neomake/eslint/eslintrc.js'],
 "    \ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
 "    \ '%W%f: line %l\, col %c\, Warning - %m'
 "    \ }
-"let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_php_phpcs_args_standard = 'PSR2'
 let g:neomake_php_phpmd_maker = {
