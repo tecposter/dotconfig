@@ -22,7 +22,7 @@ call dein#add('tecposter/php-foldexpr.vim', {
 call dein#add('majutsushi/tagbar')
 call dein#add('vim-scripts/matchit.zip')
 
-call dein#add('zefei/vim-wintabs')
+" call dein#add('zefei/vim-wintabs')
 
 " --tmux--
 "call dein#add('tmux-plugins/vim-tmux-focus-events')
@@ -38,7 +38,7 @@ call dein#add('tpope/vim-dispatch')
 call dein#add('junegunn/fzf')
 
 call dein#add('justinmk/vim-sneak')
-call dein#add('tpope/vim-obsession')
+" call dein#add('tpope/vim-obsession')
 
 " call dein#add('haya14busa/incsearch.vim')
 " https://github.com/neovim/neovim/issues/5769
