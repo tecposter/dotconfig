@@ -47,6 +47,7 @@ call dein#add('justinmk/vim-sneak')
 
 
 call dein#add('cazador481/fakeclip.neovim')
+call dein#add('rking/ag.vim')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
