@@ -47,6 +47,7 @@ highlight SpecialKey ctermbg=none " make the highlighting of tabs less annoying
 set showbreak=↪
 
 "set mouse=i
+set mouse=nv
 "set clipboard=unnamed
 set clipboard+=unnamedplus
 
