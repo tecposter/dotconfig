@@ -43,7 +43,7 @@ tmux new -t sessionname
 # neovim
 
 ```
-sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt-get update
 sudo apt-get install neovim
 ```
@@ -88,3 +88,10 @@ $ sudo pacman -S nodejs npm
 $ sudo npm i -g eslint
 $ sudo npm i -g sass-lint
 ```
+
+
+# ref
+
+https://github.com/slomkowski/bash-full-of-colors
+https://github.com/alebcay/awesome-shell
+

@@ -51,7 +51,6 @@ set mouse=nv
 "set clipboard=unnamed
 set clipboard+=unnamedplus
 
-
 "highlight Folded ctermfg=4 ctermbg=3 guifg=DarkBlue guibg=LightGrey¬
 "highlight Search ctermbg=11 guibg=Yellow¬
 " FoldColumn     xxx ctermfg=4 ctermbg=248 guifg=DarkBlue guibg=Grey

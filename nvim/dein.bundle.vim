@@ -1,12 +1,12 @@
-call dein#add('Shougo/deoplete.nvim')
-call dein#add('Shougo/denite.nvim')
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
+"call dein#add('Shougo/deoplete.nvim')
+"call dein#add('Shougo/denite.nvim')
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
 
 call dein#add('scrooloose/nerdtree')
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
-call dein#add('eugen0329/vim-esearch')
+"call dein#add('eugen0329/vim-esearch')
 call dein#add('neomake/neomake')
 
 " call dein#add('airblade/vim-gitgutter')
@@ -20,7 +20,7 @@ call dein#add('tecposter/php-foldexpr.vim', {
     \})
 
 call dein#add('majutsushi/tagbar')
-call dein#add('vim-scripts/matchit.zip')
+"call dein#add('vim-scripts/matchit.zip')
 
 " call dein#add('zefei/vim-wintabs')
 
@@ -32,12 +32,12 @@ call dein#add('vim-scripts/matchit.zip')
 "call dein#add('vim-scripts/UltiSnips')
 call dein#add('janko-m/vim-test')
 
-call dein#add('craigemery/vim-autotag')
+"call dein#add('craigemery/vim-autotag')
 
-call dein#add('tpope/vim-dispatch')
+"call dein#add('tpope/vim-dispatch')
 call dein#add('junegunn/fzf')
 
-call dein#add('justinmk/vim-sneak')
+"call dein#add('justinmk/vim-sneak')
 " call dein#add('tpope/vim-obsession')
 
 " call dein#add('haya14busa/incsearch.vim')
@@ -46,8 +46,11 @@ call dein#add('justinmk/vim-sneak')
 " https://github.com/haya14busa/incsearch.vim/issues/88
 
 
-call dein#add('cazador481/fakeclip.neovim')
+"call dein#add('cazador481/fakeclip.neovim')
 call dein#add('rking/ag.vim')
+
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('gosukiwi/vim-atom-dark')
 
 " You can specify revision/branch/tag.
 "call dein#add('Shougo/vimshell', { 'rev': '3787e5' })

@@ -7,3 +7,6 @@ source ~/.config/nvim/dein.vim
 " Ref:
 " http://stenver.tech/vim-guides-how-to-set-up-neovim/
 
+syntax enable
+set background=dark
+colorscheme atom-dark-256
