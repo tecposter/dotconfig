@@ -249,3 +249,6 @@ umask 022
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# sudo apt install autojump
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh
