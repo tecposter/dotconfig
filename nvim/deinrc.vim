@@ -198,6 +198,7 @@ nmap <silent> <leader>ct :TagbarToggle<CR>
 " junegunn/fzf
 " https://github.com/junegunn/fzf
 nmap <silent> <C-P> :FZF<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " haya14busa/incsearch.vim
 " https://github.com/haya14busa/incsearch.vim
