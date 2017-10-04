@@ -23,6 +23,11 @@ sudo apt purge tmux
 
 [Install tmux from source code](http://www.tecposter.cn/a/install-tmux-source-code) 
 
+prepare
+```
+sudo apt install automake pkg-config libevent-dev libncurses5-dev
+```
+
 ```
 git clone https://github.com/tmux/tmux.git
 cd tmux
@@ -51,7 +56,7 @@ tmux & nvim
 ```
 mkdir ~/.config
 cd ~/.config
-ln -s ./../.dotconfig/tmux
+# ln -s ./../.dotconfig/tmux
 
 cd ~
 ln -s .dotconfig/tmux/tmux.conf .tmux.conf
@@ -89,6 +94,28 @@ install tmux plugin
 ```
 
 
+## usefull tools
+
+[autojump](https://www.tecposter.cn/a/linux-tool-autojump)
+```
+sudo apt install autojump
+```
+
+[cheat](https://www.tecposter.cn/a/linux-command-cheat)
+```
+[sudo] pip3 install cheat
+```
+
+[junegunn/fzf](https://github.com/junegunn/fzf)
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+[the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+```
+sudo apt-get install silversearcher-ag
+```
 ------------------------
 
 
