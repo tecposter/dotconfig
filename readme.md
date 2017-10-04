@@ -1,3 +1,97 @@
+
+# Set up dotconfig
+
+## Install neovim
+ref: https://github.com/neovim/neovim/wiki/Installing-Neovim
+
+
+**ubuntu**
+
+```
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+```
+
+
+## Install tmux
+
+Remove old version
+```
+sudo apt purge tmux
+```
+
+[Install tmux from source code](http://www.tecposter.cn/a/install-tmux-source-code) 
+
+```
+git clone https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+./configure && make
+sudo cp tmux /usr/local/bin/
+```
+
+install tmux-plugins/tpm
+```
+cd ~/.dotconfig/tmux/plugins
+git clone https://github.com/tmux-plugins/tpm
+```
+
+
+## set up dotconfig
+
+git clone 
+```
+mkdir ~/.dotconfig
+cd ~/.dotconfig
+git clone https://github.com/tecposter/dotconfig.git .
+```
+
+tmux & nvim
+```
+mkdir ~/.config
+cd ~/.config
+ln -s ./../.dotconfig/tmux
+
+cd ~
+ln -s .dotconfig/tmux/tmux.conf .tmux.conf
+```
+
+nvim
+```
+cd ~/.config
+ln -s ./../.dotconfig/nvim 
+
+## install dein.vim
+cd ~/.dotconfig/nvim/
+curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+sh ./installler.sh ./bundle
+```
+
+open nvim
+```
+:call dein#install()
+```
+
+bash
+```
+cd ~ 
+ln -s .dotconfig/bash/bash_aliases.sh .bash_aliases
+ln -s .dotconfig/bash/bash_logout.sh .bash_logout
+ln -s .dotconfig/bash/bash_profile.sh .bash_profile
+ln -s .dotconfig/bash/bashrc.sh .bashrc
+```
+
+install tmux plugin
+```
+<C-b> I // install plugins
+<C-b> R // reload tmux config
+```
+
+
+------------------------
+
+
 # ssh key
 
 ```
